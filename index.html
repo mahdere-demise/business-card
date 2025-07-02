@@ -9,13 +9,20 @@
       font-family: Arial, sans-serif;
       background-color: #f7f7f7;
       padding: 20px;
-      text-align: center;
+      margin: 0;
     }
     .container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       gap: 20px;
+    }
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
     .card {
       background: white;
@@ -24,6 +31,7 @@
       max-width: 400px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       border-radius: 10px;
+      text-align: center;
     }
     .card img {
       width: 100%;
@@ -43,6 +51,14 @@
       color: #0077cc;
       text-decoration: none;
     }
+    .qr-center {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .qr-center img {
+      width: 280px;
+      height: 280px;
+    }
   </style>
 </head>
 <body>
@@ -59,7 +75,6 @@
         <p>📍11900 NE 1st ST, Bellevue, WA 98087</p>
         <img src="vcard_mahdere_qr.png" alt="Download Contact QR" style="margin-top: 15px; width: 120px;">
         <p>Scan to save contact</p>
-
       </div>
     </div>
 
@@ -75,12 +90,11 @@
         <p>📍16400 Southcenter Pkwy. Ste. 306, Seattle, WA 98188</p>
       </div>
     </div>
+  </div>
 
-     <div style="margin-top: 40px;">
-        <img src="qr_business_card_page.png" alt="Business card QR Code" style="width: 280px; height: 280px;">
-        <h2>Scan this QR to view our digital card page</h2>
-    </div>
-    
+  <div class="qr-center">
+    <img src="qr_business_card_page.png" alt="Business card QR Code">
+    <h2>Scan this QR to view our digital card page</h2>
   </div>
 </body>
 </html>
