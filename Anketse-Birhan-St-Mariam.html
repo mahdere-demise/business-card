@@ -49,8 +49,17 @@
       color: #222;
     }
 
-    .agents {
+    .agent-qr-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
       margin-top: 15px;
+    }
+
+    .agents {
+      flex: 1;
+      min-width: 200px;
     }
 
     .agents span {
@@ -59,11 +68,29 @@
       font-weight: 500;
     }
 
+    .qr-code {
+      width: 120px;
+      height: 120px;
+      margin-left: 20px;
+    }
+
     .footer {
       margin-top: 20px;
       font-style: italic;
       text-align: center;
       color: #666;
+    }
+
+    @media (max-width: 600px) {
+      .agent-qr-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .qr-code {
+        margin-left: 0;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
@@ -80,11 +107,18 @@
 
       <strong>Anketse Birhan St Mariam and St Arsema -</strong>
 
-      <div class="agents">
-        <span>Buyer Agents:</span>
-        <span>Mahder Assefa Demise</span>
-        <span>&</span>
-        <span>Bella Wondimu Goode</span>
+      <div class="agent-qr-wrapper">
+        <div class="agents">
+          <span>Buyer Agents:</span>
+          <span>Mahder Assefa Demise</span>
+          <span>&</span>
+          <span>Bella Wondimu Goode</span>
+        </div>
+        <img
+          src="qr-code.png"
+          alt="Digital Business Card QR Code"
+          class="qr-code"
+        />
       </div>
     </div>
 
