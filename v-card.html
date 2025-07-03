@@ -1,70 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahdere Demise - Realtor</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      padding: 20px;
-      margin: 0;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 20px;
-    }
-    @media (min-width: 768px) {
-      .container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-    .card {
-      background: white;
-      padding: 20px;
-      width: 100%;
-      max-width: 400px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 10px;
-      text-align: center;
-    }
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .info {
-      margin-top: 20px;
-    }
-    .info h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    .info p {
-      margin: 5px 0;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    .qr-center {
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Business Cards</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 40px;
+  }
+
+  .container {
+    display: flex;
+    gap: 20px; /* space between cards */
+    justify-content: center;
+    align-items: stretch; /* equal height */
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px; /* fixed width */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 100%;
+    height: 300px; /* fixed height */
+    object-fit: cover;
+  }
+
+  .info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .info h1 {
+    margin: 0 0 8px 0;
+    font-size: 1.5em;
+    color: #333;
+  }
+
+  .info p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #666;
+  }
+
+  .qr-center {
       text-align: center;
       margin-top: 40px;
     }
-    .qr-center img {
+  .qr-center img {
       width: 280px;
       height: 280px;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <img src="partner-card.jpg" alt="Mahdere Business Card Image">
+
+<div class="container">
+  <div class="card">
+    <img src="partner-card.jpg" alt="Mahdere Business Card Image" />
       <div class="info">
         <h1>Mahdere Demise</h1>
         <p>Realtor</p>
@@ -76,10 +83,10 @@
         <img src="vcard_mahdere_qr.png" alt="Download Contact QR" style="margin-top: 15px; width: 120px;">
         <p>Scan to save contact</p>
       </div>
-    </div>
+  </div>
 
-    <div class="card">
-      <img src="Bella-business-card.jpg" alt="Bella Business Card Image">
+  <div class="card">
+    <img src="Bella-business-card.jpg" alt="Partner Business Card Image" />
       <div class="info">
         <h1>Bella Wondimu Goode</h1>
         <p>RealEstate Broker</p>
@@ -91,8 +98,7 @@
         <img src="bella_vcard_direct_qr.png" alt="Download Contact QR" style="margin-top: 15px; width: 120px;">
         <p>Scan to save contact</p>
       </div>
-    </div>
   </div>
-
+</div>
 </body>
 </html>
